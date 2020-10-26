@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import { TextInput, View, Text, Button} from "react-native";
-// import Loader from '../Loader';
+
 
 class Lalalal {
   render(){
     return(
-      <h1>Oso te amo</h1>
+      <h1>hola mundo</h1>
     );
 }
 }

@@ -1,0 +1,21 @@
+wid
+
+:root{
+
+  font-size: 10px;
+  --color-blue: #070b48;
+}
+
+body{
+  background: #070b48;
+  margin: 0;
+  font-family: 'roboto';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

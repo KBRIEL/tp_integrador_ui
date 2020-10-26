@@ -1,0 +1,358 @@
+.container {
+  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  grid-column-gap: auto;
+  grid-row-gap: auto;
+  justify-content: center;
+}
+
+.notas{
+background-color: #fafafa;
+box-shadow:  2px 5px 5px 0 solid whitesmoke;
+padding: 15px;
+height:300px;
+}
+.texto{
+line-height: 25px;
+font-size: 20px;
+font-family: 'Roboto';
+text-align: justify;
+overflow-wrap:break-word;
+}
+.botones-acciones{
+  
+  background: #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 3px;
+  justify-content:right;}
+
+  .contenedor-botones{
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* filter:opacity (.6); */
+  }
+
+  
+
+.App {
+  
+  background: #030576;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 12vh;
+  display: flex;
+  justify-content: auto;
+  margin: auto;
+  padding: 15px;
+  position: auto;
+ 
+}
+
+
+.BSearch{
+  padding: 10px;
+}
+
+.App-header {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+ 
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.title-home{
+  
+  color: white;
+  margin: 4%;
+  font-size: 20px;
+}
+
+
+
+.borde{
+ 
+  border-color: gray;
+
+}
+.text-par{
+  color: whitesmoke;
+  color: white;
+  margin: 4%;
+  font-size: 15px;
+
+}
+
+.grid-container{
+  padding: 50px 0px;
+  display: grid;
+  
+  grid-column-gap: 10px ;
+  grid-row-gap: 30px;
+ 
+  direction: row-reverse;
+}
+
+.grid-container > div {
+  text-align: center;
+  font-size: 30px;
+}
+
+.btn-search{
+  
+  cursor: pointer;
+  border-radius: 12px;
+  width:75px;
+  height:35px;
+  text-align: center;
+  background:white;
+  color:#333;
+  margin-top: 8%;
+  margin-right: 80%;
+  margin-left: 5%;
+  border: none; 
+
+}
+
+
+.navbar-form {
+  position:absolute;
+  right:2%;
+  top:2%;
+}
+
+
+.modal__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.modal__content {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+
+.btn-modal {
+  cursor: pointer;
+  padding: 1rem;
+  transition: all .2s;
+  text-align: center;
+  box-shadow: 0px 0px 0px 1px #dadce0 inset;
+  border-radius: .5rem;
+}
+
+.btn-modal:hover {
+  background-color: var(--color-background);
+}
+
+.btn-modal:active {
+  background-color: var(--color-background);
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(2, 5rem);
+  grid-column-gap: 2rem;
+  justify-content: end;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.Nota {
+  background-color: var(--color-yellow);
+  padding: 1.5rem;
+  height: 25rem;
+  transition: all .3s;
+  box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  line-height: 2.5rem;
+  font-size: 1.6rem;
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+
+.textarea__container {
+  padding: 3rem;
+  padding: 0 2rem;
+  padding-top: 3rem;
+}
+
+textarea {
+  background-color: transparent;
+  width: 100%;
+  resize: none;
+  line-height: 1.5rem;
+  outline: none;
+  border: none;
+}
+
+.btn-add-nota {
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 50%;
+  box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.actiones-botones {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-column-gap: 10px;
+  justify-content: end;
+  visibility: hidden;
+}
+
+.Nota:hover .actiones-botones {
+  visibility: visible;
+}
+
+
+.modal {
+  background-color: #fff;
+  width: 50%;
+}
+
+/* Definimos las transiciones */
+.navbar-form .form-control[type=text] {
+  background: transparent;
+  display:inline-block;
+  transition: all .5s;
+}
+
+/* Al situar el puntero en el campo de búsqueda este cambia su color de fondo a blanco, el color de la letra, el borde y la sombra */
+.navbar-form .form-control[type=text]:focus {
+  background-color: #fff;
+  border-color: #729fcf;
+  color:#333;
+  -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+  box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+/* //Responsive */
+
+/* Para pantallas grandes hacemos que el formulario se despliegue con amplitud ya que disponemos de espacio en la barra de navegación, la busqueda se ejecuta con intro o pinchando en el icono de la lupa */
+@media (min-width:1200px) {
+  .navbar-form input.form-control[type=text] { width: 160px; }
+  .navbar-form input.form-control[type=text]:focus { width: 350px; }
+}
+
+/* Para pantallas menores reducimos el campo de busqueda y hacemos que se despliegue cuando hacemos focus sobre el icono de la lupa. La busqueda se ejecuta con intro o pinchando de nuevo en el icono de la lupa */
+@media (max-width: 1200px) {
+  .navbar-form .form-control[type=text] {
+      width:40px;
+      position:absolute;
+      right:0px;
+      z-index:1000;
+      padding:8px 12px;
+      cursor:pointer;
+  }
+
+  .navbar-form,
+  .navbar-form div.input-group {
+      width:40px;
+      height:40px;
+  }
+  .navbar-form .form-control[type=text]:focus {
+      position:absolute;
+      right:40px;
+      width:250px;
+  }
+}
+
+/* Para pantallas de smartphones ajustamos el ancho del campo de busqueda */
+@media (max-width: 375px) {
+  .navbar-form .form-control[type=text]:focus {
+      width:150px;
+  }
+}
+
+.demo, .demo-2 {
+  position:relative;
+  height:100px;
+  width:500px;
+}
+.demo .form-search, .demo-2 .form-search {
+  position:absolute;
+  right:0px;
+  top:0px;
+}
+.demo .form-search input[type=text],
+.demo-2 .form-search input[type=text] {
+  -webkit-appearance: none;
+  font-family: inherit;
+  font-size: 100%;
+  border: solid 1px #ccc;
+  padding: 9px 18px;
+  width: 200px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+.demo-2 .form-search input[type=text] {
+  width:60px;
+  position:absolute;
+  right:0px;
+  z-index:1000;
+  padding:8px 12px;
+  cursor:pointer;
+}
+.demo-2 .form-search div.input-group {
+  width:60px;
+}
+.demo .form-search input[type=text]:focus {
+  width: 350px;
+  background-color: #fff;
+}
+.demo-2 .form-search input[type=text]:focus {
+  position:absolute;
+  right:60px;
+  width:250px;
+}
+.demo .form-search button.btn,
+.demo-2 .form-search button.btn {
+  padding:16px 12px;
+  border-top-right-radius:4px;
+  border-bottom-right-radius: 4px;
+  cursor:not-allowed;
+  
+}
+.demo-2 .form-search button.btn {
+padding:15px 12px;
+}
+
+@media only screen and (max-width: 50em) {
+  .modal {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .modal {
+    width: 100%;
+  }
+}
+
+  

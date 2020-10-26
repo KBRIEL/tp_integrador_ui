@@ -3,13 +3,11 @@ package view
 
 import appModel.AuthorAppModel
 import appModel.MediumAppModel
-import org.ui.Author
-import org.ui.bootstrap.getMediumSystem
-import org.uqbar.arena.Application
+
 import org.uqbar.arena.kotlin.extensions.*
 import org.uqbar.arena.widgets.*
 import org.uqbar.arena.windows.SimpleWindow
-import org.uqbar.arena.windows.Window
+
 import org.uqbar.arena.windows.WindowOwner
 import org.uqbar.lacar.ui.model.Action
 

@@ -1,31 +1,25 @@
 package appModel
 import org.eclipse.xtend.lib.annotations.Accessors
 import org.ui.*
-import org.ui.bootstrap.getMediumSystem
 
-
-import org.ui.bootstrap.categories
 import org.uqbar.commons.model.annotations.Observable
 
 @Accessors
 @Observable
 class MediumAppModel(mediumSystem: MediumSystem) {
     val medium = mediumSystem
-   // var medium: MediumSystem = MediumSystem();
+
     var idGen :IdGenerator= IdGenerator();
     var authors = medium.authors
     var email: String? = ""
     var password: String? =""
 
 
-    //private final val idGenerator: org.ui.IdGenerator /* compiled code */
 
     val notes: MutableList<Note> = medium.notes
 
     var notesAppModel: MutableList<NoteAppModel> = notes.map{ NoteAppModel(it)}.toMutableList()
-    //var selectedNote : NoteAppModel?= notesAppModel.get(0)
-   // var id: String = selectedNote!!.id
-   // var title : String = selectedNote!!.title
+
 //--------------note------------
     var setCategoria :String = ""
     var setId: String = ""
@@ -49,14 +43,6 @@ class MediumAppModel(mediumSystem: MediumSystem) {
         print(noteId)
         medium.editNote(noteId, draftNote)
     }
-
-    //private final fun existNoteWithSameTitle(authorId: kotlin.String, title: kotlin.String): kotlin.Unit { /* compiled code */ }
-
-
-
-    //private final fun existUserWithEmail(email: kotlin.String): kotlin.Unit { /* compiled code */ }
-
-   // private final fun formatCategories(categories: kotlin.String): kotlin.collections.List<kotlin.String> { /* compiled code */ }
 
 
 
@@ -124,35 +110,6 @@ class MediumAppModel(mediumSystem: MediumSystem) {
 
     fun notasXAuthor(idAuthor : String): List<NoteAppModel>{
         return notesAppModel.filter{it.autor.id == idAuthor}
-    }
-    fun mismoTitulo(title : String, idAuthor : String):Boolean{
-
-        return notesAppModel.any{(it.autor.id == idAuthor && title == it.title) or (it.autor.id == idAuthor && it.title =="")}
-    }
-    fun notasXAuthor2(idAuthor : String): List<String> {
-        var lista: MutableList<String> = mutableListOf()
-
-        for (i in notesAppModel) {
-            if (i.autor.id == idAuthor) {
-                lista.add(i.autor.name)
-                lista.add(i.title)
-            }
-
-        }
-        return lista
-    }
-
-
-    fun notasXATitle(idA : String):List<String>{
-        return notasXAuthor(idA).map{it.title}
-    }
-
-    fun notasXAID(idA : String):List<String>{
-        return notasXAuthor(idA).map{it.id}
-    }
-    fun nombresNotas(): List<String>{
-        return medium.notes.map{it.title
-        }
     }
 
 

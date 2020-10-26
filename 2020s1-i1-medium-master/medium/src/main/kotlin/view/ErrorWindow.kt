@@ -15,7 +15,7 @@ import org.uqbar.lacar.ui.model.Action
 class ErrorWindow (owner: WindowOwner, model: MediumAppModel) : SimpleWindow<MediumAppModel>(owner, model)  {
 
     var modelo : MediumAppModel = model
-   // var texto : String = error
+
 
     override fun createFormPanel(mainPanel: Panel?) {
         Panel(mainPanel) with {

@@ -19,7 +19,7 @@ class AgregarEditarWindows (owner: WindowOwner, model: MediumAppModel, note : No
     var noteId = note.id
     var modelo = model
     var autor = note.autor
-   //// var notesAuthor = modelo.notasXAuthor(autor.id)
+
 
 
 
